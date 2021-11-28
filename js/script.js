@@ -1,3 +1,9 @@
+//
+//
+//スライドショー
+//
+//
+
 // オプションを指定してSkipprの実行
 $(".theTarget").skippr({
   // スライドショーの変化（"fade" or "slide"）
@@ -22,8 +28,6 @@ $(".theTarget").skippr({
   hidePrevious : false
 });
 
-
-
 $(function() {
   $('.menu-trigger').on('click', function(event) {
     $(this).toggleClass('active');
@@ -32,3 +36,18 @@ $(function() {
   });
 });
 
+
+//
+//
+//タブメニュー
+//
+//
+$('#tab-contents .tab[id != "tab1"]').hide();
+
+$('#tab-menu a').on('click', function(event) {
+  $("#tab-contents .tab").hide();
+  $("#tab-menu .active").removeClass("active");
+  $(this).addClass("active");
+  $($(this).attr("href")).show();
+  event.preventDefault();
+});
