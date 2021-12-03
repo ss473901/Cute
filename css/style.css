@@ -227,4 +227,14 @@ footer {
 
 /*  */
 /*  */
-/* スライダー */
+/* 右下ボタン */
+.move-top {
+  box-sizing: border-box;
+  position: fixed;
+  bottom: 125px;
+  right: 156px;
+  width: 60px;
+  height: 60px;
+  /* border: 1px solid black; */
+  /* border-radius: 41px; */
+}
